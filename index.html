@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacija</title>
+<style>
+
+body {
+            background-color: #050210;
+        }
+.vz{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 100px auto;
+
+    border-radius: 50%;
+    background: linear-gradient(45deg, #fb5dad, #55fb9f, #b97aff);
+
+    box-shadow:     
+    0 0 80px  #b97aff,
+    10px 0 90px 10px #55fb9f,
+    -10px 0 80px 5px #fb5dad;
+
+    animation: animation 1s ease-in-out infinite;}
+
+    .vz::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 88%;
+            height: 88%;
+            border-radius: 50%;
+            
+            animation-name: radial-animation;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.77, 0.52, 0, 1.76);
+        
+        
+        }
+
+        @keyframes radial-animation{
+
+            0%{
+                background: radial-gradient(circle farthest-corner at center center, #16083a 10%, #0b041e 10%, #090318 30%, #050210 30%);
+            }
+            25%{
+                background: radial-gradient(circle farthest-corner at center center, #16083a 20%, #0b041e 20%, #090318 40%, #050210 40%);
+            }
+            50%{
+                background: radial-gradient(circle farthest-corner at center center, #16083a 30%, #0b041e 30%, #090318 50%, #050210 50%);
+            }
+            75%{
+                background: radial-gradient(circle farthest-corner at center center, #16083a 45%, #0b041e 45%, #090318 65%, #050210 65%);;
+            }
+            100%{
+                background: radial-gradient(circle farthest-corner at center center, #16083a 65%, #0b041e 65%, #090318 80%, #050210 80%);
+            }
+        }
+  
+  
+  @keyframes animation {
+            0% {
+                transform: rotate(0deg);
+              
+            }
+            50% {
+                transform: rotate(180deg);
+                
+            }
+            100% {
+                transform: rotate(360deg);
+                
+            }
+        }
+        
+            
+
+</style>
+</head>
+<body>
+    
+<div  id="bz"  class="vz"></div>
+
+</body>
+</html>
